@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("CV")),
+      appBar: AppBar(title: const Text("CV")),
       body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,25 +40,25 @@ class _HomePageState extends State<HomePage> {
             //   style: TextStyle(fontSize: 25),
             // ),
             //),
-            SizedBox(
-              height: 20,
+            const SizedBox(
+              height: 25,
             ),
             ValueListenableBuilder<int>(
                 valueListenable: counter.count,
                 builder: (context, count, child) {
                   return Container(
-                    padding: EdgeInsets.all(40),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.all(40),
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.purple,
                       //borderRadius: BorderRadius.circular(14)
                     ),
                     child: Text('$count',
-                        style: TextStyle(
-                            fontSize: 65, fontWeight: FontWeight.w700)),
+                        style: const TextStyle(
+                            fontSize: 70, fontWeight: FontWeight.w700)),
                   );
                 }),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Row(
@@ -71,16 +71,16 @@ class _HomePageState extends State<HomePage> {
                     });
                   },
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     height: 50,
                     width: 100,
-                    decoration: BoxDecoration(boxShadow: [
+                    decoration: const BoxDecoration(boxShadow: [
                       BoxShadow(
                         blurRadius: 5,
                         offset: Offset(3.0, 4.0),
                       )
                     ], color: Colors.purpleAccent),
-                    child: Text(
+                    child: const Text(
                       "Increment",
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
@@ -95,16 +95,16 @@ class _HomePageState extends State<HomePage> {
                     });
                   },
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     height: 50,
                     width: 100,
-                    decoration: BoxDecoration(boxShadow: [
+                    decoration: const BoxDecoration(boxShadow: [
                       BoxShadow(
                         blurRadius: 5,
                         offset: Offset(3.0, 4.0),
                       )
                     ], color: Colors.purpleAccent),
-                    child: Text(
+                    child: const Text(
                       "Decrement",
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
